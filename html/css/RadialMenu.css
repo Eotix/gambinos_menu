@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@400;500&display=swap");
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: "Helvetica", sans-serif;
+}
+#container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#menuGrid {
+    position: absolute;
+    left: 500px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+svg.menu {
+    pointer-events: none;
+    z-index: 1;
+}
+svg {
+    position: absolute;
+    z-index: 1 !important;
+}
+#navMenu {
+    position: relative;
+    z-index: 2;
+}
+
+
+#menuCenterLabel {
+    position: absolute;
+    left: 1470px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999999;
+    pointer-events: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-shadow: rgb(0, 0, 0) -1px 1px 0px, rgb(0, 0, 0) 1px 1px 0px, rgb(0, 0, 0) 1px -1px 0px, rgb(0, 0, 0) -1px -1px 0px;
+    text-align: center;
+}
+
+.menuItem {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+
+    background: radial-gradient(circle at center, rgba(27, 74, 85, 0.8) 0%, rgba(10, 15, 16, 0.8) 100%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: transform 0.2s ease, border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.menuItem:hover {
+    border: 2px solid #4a8278;
+    box-shadow: 0 0 10px #4a827880;
+}
+.menuItem:hover {
+    --scale: 1.1;
+}
+
+.menuItem {
+    --scale: 1;
+}
+
+.menuIcon {
+    font-size: 20px;
+}
+
+.menuText {
+    font-size: 12px;
+    text-align: center;
+}
+
+/* Nested / back button */
+.menuBack {
+    background: rgba(0,0,0,0.8);
+}
+.menuIconSvg {
+    width: 26px;
+    height: 26px;
+    fill: white !important;
+    color: white !important;
+}
+
+.menuIconSvg use {
+    fill: white !important;
+}
+#subMenu {
+    position: absolute;
+    bottom: 70px;
+    left: 1470px;
+    transform: translateX(-50%);
+    display: grid;
+    gap: 10px;
+    z-index: 9999;
+}
+#subMenu {
+    justify-content: center;
+}
+.subItem {
+    width: 70px;
+    height: 70px;
+    border-radius: 10px;
+
+    background: radial-gradient(circle at center, rgba(27, 74, 85, 0.8) 0%, rgba(10, 15, 16, 0.8) 100%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.subItem:hover {
+    transform: scale(1.1);
+    border: 2px solid #4a8278;
+    box-shadow: 0 0 10px #4a827880;
+}
